@@ -1,12 +1,19 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-scroll';
+import ContactFormModal from './ContactFormModal';  // Import the new component
+
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isContactModalOpen, setIsContactModalOpen] = useState(false);
   const navRef = useRef(null);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
+  };
+
+  const toggleContactModal = () => {
+    setIsContactModalOpen(!isContactModalOpen);
   };
 
   useEffect(() => {
@@ -16,7 +23,7 @@ const NavBar = () => {
       }
     };
 
-    document.addEventListener('mousedown', handleClickOutside);
+    // document.addEventListener('mousedown', handleClickOutside);
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
@@ -34,8 +41,9 @@ const NavBar = () => {
         <Link to="home" smooth={true} duration={500} onClick={toggleMenu}>Home</Link>
         <Link to="recipes" smooth={true} duration={500} onClick={toggleMenu}>About</Link>
         <Link to="workouts" smooth={true} duration={500} onClick={toggleMenu}>Our Work</Link>
-        <Link to="about" smooth={true} duration={500} onClick={toggleMenu}>Contact</Link>
+        <Link to="about" smooth={true} duration={500} onClick={toggleContactModal}>Contact</Link>
       </nav>
+      <ContactFormModal isOpen={isContactModalOpen} onClose={toggleContactModal} />
     </header>
   );
 };
