@@ -24,7 +24,7 @@ const NavBar = () => {
 
   return (
     <header>
-      <h1 className="logo"><Link to="home" smooth={true} duration={500} className="no-link-style">MUNCHY</Link></h1>
+      <h1 className="logo"><Link to="home" smooth={true} duration={500} className="no-link-style">Fil's Flooring Inc</Link></h1>
       <div className={`hamburger ${isOpen ? 'open' : ''}`} onClick={toggleMenu}>
         <span></span>
         <span></span>
@@ -32,9 +32,9 @@ const NavBar = () => {
       </div>
       <nav ref={navRef} className={`navbar ${isOpen ? 'open' : ''}`}>
         <Link to="home" smooth={true} duration={500} onClick={toggleMenu}>Home</Link>
-        <Link to="recipes" smooth={true} duration={500} onClick={toggleMenu}>Recipes</Link>
-        <Link to="workouts" smooth={true} duration={500} onClick={toggleMenu}>Workouts</Link>
-        <Link to="about" smooth={true} duration={500} onClick={toggleMenu}>About us</Link>
+        <Link to="recipes" smooth={true} duration={500} onClick={toggleMenu}>About</Link>
+        <Link to="workouts" smooth={true} duration={500} onClick={toggleMenu}>Our Work</Link>
+        <Link to="about" smooth={true} duration={500} onClick={toggleMenu}>Contact</Link>
       </nav>
     </header>
   );
