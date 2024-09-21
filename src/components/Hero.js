@@ -7,7 +7,9 @@ class Hero extends Component {
     state = {  }
     render() { 
         return ( 
-            <h1>Hero Section</h1>
+            <div className='hero'>
+                <h1>Hero Section</h1>
+            </div>
          );
     }
 }

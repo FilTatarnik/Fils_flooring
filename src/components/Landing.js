@@ -6,8 +6,10 @@ class Landing extends Component {
     }
     state = {  }
     render() { 
-        return ( 
+        return (
+            <div>
             <h1>Landing Page</h1>
+            </div>
          );
     }
 }
