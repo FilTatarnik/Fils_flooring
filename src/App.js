@@ -1,17 +1,23 @@
 import React from 'react';
 import './App.css';
-import Navbar from './components/Navbar.js';
-import Hero from './components/Hero.js';
-import Landing from './components/Landing.js';
-import Footer from './components/Footer.js'
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import About from './components/About';
+import OurWork from './components/OurWork';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
 
 function App() {
   return (
     <div className="App">
-        <Navbar />
+      <Navbar />
+      <main>
         <Hero />
-        <Landing />
-        <Footer />
+        <About />
+        <OurWork />
+        <Contact />
+      </main>
+      <Footer />
     </div>
   );
 }
