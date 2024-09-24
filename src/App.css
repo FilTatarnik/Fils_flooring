@@ -4,8 +4,8 @@ body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
-  background: #367024;
-  color: white;
+  /* background: rgb(207, 207, 207);f */
+  color: black;
 }
 
 .App {
@@ -31,8 +31,8 @@ header {
   font-family: 'Bubblegum Sans', cursive;
   font-size: 2rem;
   margin: 0;
-  border-left: solid 1px black;
-  border-right: solid 1px black;
+  /* border-left: solid 1px black;
+  border-right: solid 1px black; */
 }
 
 .navbar {
@@ -41,11 +41,12 @@ header {
   justify-content: space-evenly;
   gap: 2rem;
   padding-bottom: 1rem;
-  border-bottom: solid 1px black;
+
+  /* border-bottom: solid 1px black; */
 }
 
 .navbar a {
-  color: white;
+  color: black;
   text-decoration: none;
   font-weight: bold;
 }
@@ -64,6 +65,11 @@ header {
   transition: all 0.3s ease;
 }
 
+/* Hero Styles */
+.hero {
+  background-image: url('');
+}
+
 /* Section styles */
 section {
   min-height: 100vh;
@@ -74,16 +80,49 @@ section {
   padding: 2rem;
 }
 
+.Section1 {
+  background-color: lightsteelblue;
+}
+.Section2 {
+  background-color: lightpink;
+
+}
+.Section3 {
+  background-color: lightseagreen;
+
+}
+.Section4 {
+  background-color: lightgrey;
+
+}
+.Section5 {
+  background-color: lightblue;
+
+}
+.Section6 {
+  background-color: lightcoral;
+
+}
+.Section7 {
+  background-color: lightgreen;
+
+}
 section h2 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
 }
 
 /* Footer styles */
-footer {
-  /* background-color: rgba(94, 65, 49, 0.9); */
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: fixed;
   padding: 1rem;
-  text-align: center;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: black;
 }
 
 /* Responsive styles */

@@ -6,18 +6,23 @@ import About from './components/About';
 import OurWork from './components/OurWork';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import MainPage from './components/MainPage';
+
 
 function App() {
   return (
     <div className="App">
-      <Navbar />
       <main>
+        <Navbar />
+        <MainPage />
+        <Footer />
+        {/* <Navbar />
         <Hero />
         <About />
         <OurWork />
         <Contact />
+        <Footer /> */}
       </main>
-      <Footer />
     </div>
   );
 }
