@@ -4,10 +4,11 @@ const MainPage = () => {
     return (
         <div className='mainDiv'>
             <section className='Section1'>
-                <h1>1</h1>
+                <h1>Fils Flooring</h1>
+                <h2>Elevate Every Step</h2>
             </section>
             <section className='Section2'>
-                <h1>Fils Flooring connects people to their spaces and the earth through sustainable, high-quality flooring solutions, helping every home and business stand out with lasting beauty.</h1>
+                <h1>Fils Flooring connects people to their spaces through high-quality flooring solutions that blend style and durability, helping every home and business stand out with lasting beauty.</h1>
             </section>
             <section className='Section3'>
                 <h1>Image Here</h1>
