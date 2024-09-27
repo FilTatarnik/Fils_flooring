@@ -15,7 +15,6 @@ function App() {
       <main>
         <Navbar />
         <MainPage />
-        <Footer />
         {/* <Navbar />
         <Hero />
         <About />
