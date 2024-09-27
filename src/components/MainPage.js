@@ -25,9 +25,8 @@ const MainPage = () => {
             </section>
             <section className='Section5'>
                 <section className='Section5left'>
-                    <h1>HŌM Mylks
-                    Whole Family approved</h1>
-                    <p>A favorite for parents and kids alike. HŌM Mylks are not just delicious, but great for growing bodies and minds. Made with organic ingredients, herbs & adaptogens to help the body thrive!</p>
+                    <h1>Fils Flooring - Whole Family Approved</h1>
+                    <p>A favorite for families and homeowners alike. Fils Flooring offers not just beautiful designs, but durable solutions for every room. Crafted with premium materials to create spaces that stand up to life’s daily wear and tear!</p>
                 </section>
                 <section>
                     <p>Image Goes Here</p>
@@ -38,17 +37,18 @@ const MainPage = () => {
                     <p>Image Goes Here</p>
                 </section>
                 <section className='Section6left'>
-                    <h1>HŌM Mylks
-                    Whole Family approved</h1>
-                    <p>A favorite for parents and kids alike. HŌM Mylks are not just delicious, but great for growing bodies and minds. Made with organic ingredients, herbs & adaptogens to help the body thrive!</p>
+                    <h1>GET YOUR</h1>
+                    <h2>Hardwood Transformation</h2>
+                    <h2>Elevate Your Home with Timeless Elegance</h2>
+                    <p>Our premium hardwood collection offers the perfect blend of style and durability to enhance any room. Whether you’re looking for a modern finish or classic warmth, our expertly crafted hardwood floors will transform your space with lasting beauty and unmatched quality. Easy to maintain and built to stand the test of time.</p>
                 </section>
             </section>
             <section className='Section7'>
-
+                <h1>Experience the epitome of elegance with Fils Flooring. Where artistry meets precision, our premium floors exude sophistication, transforming your home or business into a sanctuary of timeless luxury and unparalleled refinement.</h1>
             </section>
 
             <section className='Section8'>
-                <h1>Footer</h1>
+                <h1>&copy; 2024 Fil's Flooring Inc. All rights reserved.</h1>
             </section>
         </div>
     );

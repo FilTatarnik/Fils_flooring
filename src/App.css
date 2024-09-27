@@ -138,16 +138,25 @@ section {
 .Section6 {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   background-color: lightcoral;
   height: 60vh;
   min-height: unset;
 }
+.Section6left{
+  width: 33%;
+}
+
 .Section7 {
   background-color: lightslategray;
   height: 60vh;
   min-height: unset;
+  font-size: 3rem;
 }
 .Section8 {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
   background-color: lightgreen;
   height: 30vh;
   min-height: unset;
