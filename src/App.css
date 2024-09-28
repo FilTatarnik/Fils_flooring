@@ -1,10 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
 
 body {
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
-  /* background: rgb(207, 207, 207);f */
+  font-family: 'SaolDisplay', serif;
   color: black;
 }
 
@@ -12,27 +11,21 @@ body {
   text-align: center;
 }
 
-/* Navbar styles */
 header {
-  /* background-color: rgba(94, 65, 49, 0.9); */
   padding: 1rem;
-  position: fixed; 
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 1000;
   display: flex;
   flex-direction: column;
-  /* justify-content: space-evenly; */
-  /* align-items: stretch; */
 }
 
 .logo {
   font-family: 'Bubblegum Sans', cursive;
   font-size: 2rem;
   margin: 0;
-  /* border-left: solid 1px black;
-  border-right: solid 1px black; */
 }
 
 .navbar {
@@ -41,14 +34,18 @@ header {
   justify-content: space-evenly;
   gap: 2rem;
   padding-bottom: 1rem;
-
-  /* border-bottom: solid 1px black; */
 }
 
 .navbar a {
   color: black;
   text-decoration: none;
   font-weight: bold;
+  transition: color 0.2s ease;
+  padding: 1rem;
+}
+
+.navbar a:hover {
+  color: white;
 }
 
 .hamburger {
@@ -65,16 +62,6 @@ header {
   transition: all 0.3s ease;
 }
 
-/* Hero Styles */
-.hero {
-  /* background-image: url(''); */
-}
-
-/* Section styles */
-.mainDiv {
-
-}
-
 section {
   min-height: 100vh;
   display: flex;
@@ -86,98 +73,99 @@ section {
 
 .Section1 {
   font-size: 5rem;
-  background-color: lightsteelblue;
-  /* background-image: url('./assets/IMG3.jpg'); */
-  /* background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 100%; */
-  height: 100vh; /* Adjust as needed */
+  background-color: #C68B4A;
+  height: 66vh;
 }
+
 .Section2 {
-  background-color: lightpink;
+  background-color: #2B465A;
   height: 60vh;
   min-height: unset;
   font-size: 3rem;
 }
+
 .Section3 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: lightseagreen;
+  background-color: #C68B4A;
   height: 120vh;
   min-height: unset;
 }
+
 .Section4 {
-  /* display: flex; */
-  background-color: lightpink;
+  background-color: #2B465A;
   min-height: unset;
 }
+
 .section4List {
   display: flex;
   flex-direction: row;
-  justify-content: space-between; /* or use space-around, or space-evenly */
+  justify-content: space-between;
   list-style: none;
-  padding: 0; /* ensure there's no padding */
-  margin: 0; /* ensure there's no margin */
+  padding: 0;
+  margin: 0;
   width: 100%;
 }
 
 .section4List li {
-  flex: 1; /* allow items to grow equally */
-  margin: 0 10px; /* adjust as necessary for spacing */
-}
-.Section5 {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  background-color: lightblue;
-  height: 50vh;
-  min-height: unset;
-}
-.Section5left{
-  width: 33%;
+  flex: 1;
+  margin: 0 10px;
 }
 
-.Section6 {
+.Section5, .Section6 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  background-color: lightcoral;
-  height: 60vh;
-  min-height: unset;
+  background-color: #B2501E;
+  min-height: 40vh;
+  padding: 2rem;
+  box-sizing: border-box;
 }
-.Section6left{
+
+.Section5left, .Section6left {
   width: 33%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-.Section6left h1 {
-  
-}
+
 .Section7 {
-  background-color: lightslategray;
-  height: 60vh;
-  min-height: unset;
-  font-size: 3rem;
+  background-color: #2B465A;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  box-sizing: border-box;
 }
+
+.Section7 h1 {
+  font-size: 4rem;
+  line-height: 1.2;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.Section7 h1, 
+.Section7 p {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
 .Section8 {
   display: flex;
   flex-direction: row;
   align-items: flex-end;
-  background-color: lightgreen;
-  height: 30vh;
+  background-color: #5A1A14;
+  height: 10%;
   min-height: unset;
 }
-section h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
 
-/* Footer styles */
 .footer {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  /* position: fixed; */
   padding: 1rem;
   bottom: 0;
   left: 0;
@@ -185,8 +173,73 @@ section h2 {
   color: black;
 }
 
-/* Responsive styles */
-@media (max-width: 768px) {
+html {
+  scroll-behavior: smooth;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .Section1 {
+    height: 40vh;
+    min-height: unset;
+    font-size: 2rem;
+  }
+
+  .Section2 {
+    height: 30vh;
+    min-height: unset;
+    font-size: 1.5rem;
+    padding: 2rem 1rem;
+  }
+
+
+  .Section5, .Section6 {
+    flex-direction: column;
+    height: auto;
+    padding: 2rem 1rem;
+  }
+
+  .Section5left, .Section6left {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .Section6left h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .Section6left h2 {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .Section6left p {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+
+  .Section7 {
+    font-size: 1rem;
+    padding: 2rem 1rem;
+    height: auto;
+  }
+
+  .Section8 {
+    background-color: #d14b3f;
+    height: auto;
+    padding: 1rem;
+  }
+
+  .Section8 h1 {
+    font-size: 0.8rem;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+  }
+
   .hamburger {
     display: flex;
   }
@@ -198,7 +251,6 @@ section h2 {
     top: 100%;
     left: 0;
     right: 0;
-    /* background-color: rgba(94, 65, 49, 0.9); */
     padding: 1rem;
   }
 
@@ -206,13 +258,29 @@ section h2 {
     display: flex;
   }
 
-  .Section2 {
-    height: 20%;
-    min-height: unset;
+  section {
+    padding: 1rem;
   }
 
-  .section h2 {
+  .section4List {
+    flex-direction: row;
+  }
+
+  .section4List li {
+    margin: 0.5rem 0;
+  }
+
+  section h2 {
     font-size: 2rem;
+  }
+
+  .Section7 {
+    font-size: 1rem;
+  }
+
+  .Section8 {
+    background-color: #d14b3f;
+    height: 5vh;
   }
 
   .logo {
@@ -222,9 +290,132 @@ section h2 {
   .Section2 h1 {
     font-size: 1rem;
   }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .navbar {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+  }
+
+  .navbar.open {
+    display: flex;
+  }
 }
 
-/* Smooth scrolling for the entire page */
-html {
-  scroll-behavior: smooth;
+/* Small devices (600px and up) */
+@media only screen and (min-width: 600px) and (max-width: 767px) {
+  .Section1 {
+    height: auto;
+    min-height: 40vh;
+    padding: 2rem 1rem;
+  }
+
+  .Section1 h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .Section1 h2 {
+    font-size: 1.8rem;
+  }
+
+  .Section2 {
+    height: auto;
+    padding: 2rem 1rem;
+  }
+
+  .Section2 p {
+    font-size: 2rem;
+    line-height: 1.4;
+  }
+
+  .Section3, .Section4, .Section5, .Section6, .Section7 {
+    height: auto;
+    min-height: 50vh;
+    padding: 2rem 1rem;
+  }
+
+  .section4List {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .section4List li {
+    margin: 0.5rem 0;
+    font-size: 3em;
+    padding-top: 1rem;
+  }
+
+  .Section5 {
+    flex-direction: column;
+  }
+
+  .Section6 {
+    flex-direction: column;
+  }
+
+  .Section5left, .Section6left {
+    width: 100%;
+    text-align: center;
+  }
+
+  .Section5 h1, .Section6 h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .Section5 p, .Section6 p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+
+  .Section7 h1 {
+    font-size: 3rem;
+    line-height: 1.3;
+  }
+
+  .Section8 {
+    height: auto;
+    padding: 1rem;
+  }
+
+  .Section8 h1 {
+    font-size: 0.8rem;
+  }
+}
+
+/* Medium devices (768px and up) */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  /* Styles for landscape tablets */
+  .Section7 h1 {
+    font-size: 2.2rem;
+  }
+}
+
+/* Large devices (992px and up) */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  /* Styles for laptops/desktops */
+  .Section7 {
+    padding: 3rem 2rem;
+  }
+  
+  .Section7 h1 {
+    font-size: 2.5rem;
+    max-width: 80%;
+  }
+}
+
+
+/* Extra large devices (1200px and up) */
+@media only screen and (min-width: 1200px) {
+  /* Styles for large laptops/desktops */
+
 }

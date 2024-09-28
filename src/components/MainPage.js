@@ -21,7 +21,7 @@ const MainPage = () => {
                     <li>Unmatched Comfort</li>
                     <li>Exceptional Craftsmanship</li>
                     <li>Built to Last</li>
-                    <li>Transform Your Home</li>
+                    {/* <li>Transform Your Home</li> */}
                 </ul>
             </section>
             <section className='Section5'>
