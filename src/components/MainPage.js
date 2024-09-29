@@ -17,10 +17,10 @@ const MainPage = () => {
             </section>
             <section className='Section4'>
                 <ul className='section4List'>
-                    <li>Designed for Living</li>
-                    <li>Unmatched Comfort</li>
-                    <li>Exceptional Craftsmanship</li>
-                    <li>Built to Last</li>
+                    <li><h1>Designed for Living</h1></li>
+                    <li><h1>Unmatched Comfort</h1></li>
+                    <li><h1>Exceptional Craftsmanship</h1></li>
+                    <li><h1>Built to Last</h1></li>
                     {/* <li>Transform Your Home</li> */}
                 </ul>
             </section>
