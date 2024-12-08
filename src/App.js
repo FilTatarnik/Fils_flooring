@@ -7,13 +7,14 @@ import OurWork from './components/OurWork';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import MainPage from './components/MainPage';
-
+import DynamicMainPage from './components/DynamicMainPage';
 
 function App() {
   return (
     <div className="App">
       <main>
         <Navbar />
+        {/* <DynamicMainPage /> */}
         <MainPage />
         {/* <Navbar />
         <Hero />

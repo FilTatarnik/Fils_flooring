@@ -1,4 +1,15 @@
 import React from 'react';
+// import { Button } from 'react-scroll';
+import { ChevronDown } from 'lucide-react';
+import IMG1 from '../assets/IMG1.jpg';
+import IMG2 from '../assets/IMG2.jpg';
+import IMG3 from '../assets/IMG3.jpg';
+import IMG4 from '../assets/IMG4.jpg';
+import IMG5 from '../assets/IMG5.jpg';
+import IMG6 from '../assets/IMG6.jpg';
+import IMG7 from '../assets/IMG7.jpg';
+import IMG8 from '../assets/IMG8.jpg';
+import IMG9 from '../assets/IMG9.jpg';
 
 const MainPage = () => {
     return (
@@ -6,6 +17,8 @@ const MainPage = () => {
             <section className='Section1'>
                 <h1>Fils Flooring</h1>
                 <h2>Elevate Every Step</h2>
+                {/* <Button /> */}
+                <ChevronDown size={48} color="white" className='scroll-indicator'/>
             </section>
             <section className='Section2'>
                 <h1>Fils Flooring connects people to their spaces through high-quality flooring solutions that blend style and durability, helping every home and business stand out with lasting beauty.</h1>
