@@ -23,7 +23,7 @@ html {
    Navbar & Header Styles
 ========================= */
 header {
-  /* padding: 1rem; */
+  padding: 1rem;
   position: fixed;
   top: 0;
   left: 0;
@@ -31,8 +31,7 @@ header {
   z-index: 1000;
   display: flex;
   flex-direction: column;
-   background: rgba(255, 255, 255, 0.95); 
-   /*slight background for readability */
+  background: rgba(255, 255, 255, 0.95);
 }
 
 .logo {
@@ -46,7 +45,6 @@ header {
   align-items: baseline;
   justify-content: space-evenly;
   gap: 2rem;
-  /* padding-bottom: 1rem; */
 }
 
 .navbar a {
@@ -70,13 +68,13 @@ header {
 .hamburger span {
   height: 3px;
   width: 25px;
-  background-color: white;
+  background-color: #1a2f3a;
   margin-bottom: 4px;
   transition: all 0.3s ease;
 }
 
 /* =========================
-   HERO SECTION
+   HERO SECTION (Section1)
 ========================= */
 .hero-section {
   position: relative;
@@ -88,7 +86,7 @@ header {
   background-position: center;
   background-color: #C68B4A;
   color: white;
-  margin-top: 80px; /* account for fixed header */
+  margin-top: 80px; /* to account for fixed header */
 }
 
 .hero-content {
@@ -112,7 +110,7 @@ header {
 }
 
 /* =========================
-   ABOUT SECTION
+   ABOUT SECTION (Section2)
 ========================= */
 .about-section {
   padding: 4rem 2rem;
@@ -133,7 +131,7 @@ header {
 }
 
 /* =========================
-   CTA SECTION
+   CTA SECTION (Section3)
 ========================= */
 .cta-section {
   padding: 4rem 2rem;
@@ -182,7 +180,7 @@ header {
 }
 
 /* =========================
-   FEATURES SECTION
+   FEATURES SECTION (Section4)
 ========================= */
 .features-section {
   padding: 4rem 2rem;
@@ -208,7 +206,7 @@ header {
 }
 
 /* =========================
-   FAMILY SECTION
+   FAMILY SECTION (Section5)
 ========================= */
 .family-section {
   padding: 4rem 2rem;
@@ -245,7 +243,7 @@ header {
 }
 
 /* =========================
-   HARDWOOD SECTION
+   HARDWOOD SECTION (Section6)
 ========================= */
 .hardwood-section {
   padding: 4rem 2rem;
@@ -282,7 +280,7 @@ header {
 }
 
 /* =========================
-   CLOSING SECTION
+   CLOSING SECTION (Section7)
 ========================= */
 .closing-section {
   padding: 4rem 2rem;
@@ -299,7 +297,7 @@ header {
 }
 
 /* =========================
-   FOOTER
+   FOOTER (Section8)
 ========================= */
 .footer {
   padding: 1rem 2rem;
@@ -314,24 +312,272 @@ header {
 }
 
 /* =========================
-   RESPONSIVE STYLES
+   RESPONSIVE STYLES (Reverted from Original)
 ========================= */
+
+/* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-  .hero-content h1 {
-    font-size: 2.5rem;
+  .hero-section {
+    height: 100vh;
+    min-height: unset;
+    font-size: 2rem;
   }
-  .hero-content .tagline {
+
+  .about-section {
+    height: auto;
+    min-height: unset;
+    padding: 2rem 1rem;
+  }
+  
+  /* Original used .Section2 h1; mapping to about-section h2 */
+  .about-section h2 {
+    font-size: 1rem;
+  }
+
+  /* Map .Section5 & .Section6 to family-section & hardwood-section */
+  .family-section,
+  .hardwood-section {
+    flex-direction: column;
+    height: auto;
+  }
+  
+  /* Map .Section5left & .Section6left to family-text & hardwood-text */
+  .family-text,
+  .hardwood-text {
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* For hardwood-section text – mapping original .Section6left rules */
+  .hardwood-text h2 {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+  }
+  .hardwood-text p {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+  
+  .closing-section {
+    padding: 2rem 1rem;
+    height: auto;
+  }
+  
+  .footer {
+    background-color: #d14b3f;
+    height: auto;
+    padding: 1rem;
+  }
+  /* Original .Section8 h1 mapping; if needed, apply to footer p (or add footer h1 if you use it) */
+  .footer h1 {
+    font-size: 0.8rem;
+  }
+  
+  .logo {
     font-size: 1.5rem;
   }
-  .about-section h2,
-  .cta-content h2,
-  .family-text h2,
-  .hardwood-text h2,
-  .closing-section h2 {
-    font-size: 1.8rem;
+  
+  .hamburger {
+    display: flex;
   }
+  
+  .navbar {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+  }
+  
+  .navbar.open {
+    display: flex;
+  }
+  
+  section {
+    padding: 1rem;
+  }
+  
+  /* Map .section4List to features-list */
+  .features-list {
+    flex-direction: column;
+  }
+  
   .features-list li {
-    font-size: 1.2rem;
+    margin: 0.5rem 0;
+    font-size: 2rem;
+  }
+  
+  /* Original generic rule for section h2 */
+  section h2 {
+    font-size: 2rem;
+  }
+  
+  /* Duplicate footer background override from original */
+  .footer {
+    background-color: #d14b3f;
+    height: 5vh;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+  }
+  
+  /* Original .Section2 h1 rule mapped to about-section h2 */
+  .about-section h2 {
+    font-size: 3rem;
+  }
+  
+  .hamburger {
+    display: flex;
+  }
+  
+  .navbar {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+  }
+  
+  .navbar.open {
+    display: flex;
+  }
+  
+  /* Original .Section7 h1 rule mapped to closing-section h2 */
+  .closing-section h2 {
+    font-size: 3rem;
+  }
+}
+
+/* Small devices (600px and up) */
+@media only screen and (min-width: 600px) and (max-width: 767px) {
+  .hero-section {
+    height: auto;
+    min-height: 100vh;
+    padding: 2rem 1rem;
+  }
+  
+  .hero-section h1 {
+    font-size: 5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-section h2 {
+    font-size: 3rem;
+  }
+  
+  .about-section {
+    height: auto;
+    padding: 2rem 1rem;
+  }
+  
+  .about-section p {
+    font-size: 2rem;
+    line-height: 1.4;
+  }
+  
+  /* Map Section3, Section4, Section5, Section6, Section7 to new class names */
+  .cta-section,
+  .features-section,
+  .family-section,
+  .hardwood-section,
+  .closing-section {
+    height: auto;
+    min-height: 75vh;
+    padding: 2rem 1rem;
+  }
+  
+  .features-list {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.75rem;
+  }
+  
+  .features-list li {
+    margin: 0.5rem 0;
+    font-size: 3em;
+    padding-top: 1rem;
+    line-height: 1.4;
+  }
+  
+  /* Map family and hardwood layout to column */
+  .family-section,
+  .hardwood-section {
+    flex-direction: column;
+  }
+  
+  .family-text,
+  .hardwood-text {
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Mapping headings in CTA/Features sections */
+  .cta-section h1,
+  .features-section h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .cta-section p,
+  .features-section p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+  
+  /* Map Section7 h1 to closing-section h2 */
+  .closing-section h2 {
+    font-size: 3rem;
+    line-height: 1.3;
+  }
+  
+  .footer {
+    height: auto;
+    padding: 1rem;
+  }
+  
+  .footer h1 {
+    font-size: 0.8rem;
+  }
+}
+
+/* Medium devices (768px and up) */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  /* Mapping original Section7 h1 rule */
+  .closing-section h2 {
+    font-size: 2.2rem;
+  }
+  
+  /* Mapping original Section2 h1 rule to about-section h2 */
+  .about-section h2 {
+    font-size: 3rem;
+  }
+}
+
+/* Large devices (992px and up) */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .closing-section {
+    padding: 3rem 2rem;
+  }
+  
+  .closing-section h2 {
+    font-size: 2.5rem;
+    max-width: 80%;
+  }
+  
+  .about-section h2 {
+    font-size: 3rem;
+  }
+}
+
+/* Extra large devices (1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .about-section h2 {
+    font-size: 4rem;
   }
 }
 

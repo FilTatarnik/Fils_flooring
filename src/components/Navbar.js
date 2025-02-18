@@ -22,7 +22,7 @@ const Navbar = () => {
         <Link to="our-work" smooth={true} duration={500} onClick={toggleMenu}>Our Work</Link>
         <Link to="contact" smooth={true} duration={500} onClick={toggleMenu}>Contact</Link> */}
         <Link to="hero-section" smooth={true} duration={500} onClick={toggleMenu}>Home</Link>
-        <Link to="about-section" smooth={true} duration={500} onClick={toggleMenu}>2</Link>
+        <Link to="about-section" smooth={true} duration={500} onClick={toggleMenu}>About</Link>
         <Link to="cta-section" smooth={true} duration={500} onClick={toggleMenu}>3</Link>
         <Link to="cta-content" smooth={true} duration={500} onClick={toggleMenu}>4</Link>
         <Link to="features-section" smooth={true} duration={500} onClick={toggleMenu}>5</Link>
