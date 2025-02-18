@@ -21,13 +21,13 @@ const Navbar = () => {
         <h1 className="logo">Fil's Flooring Inc</h1>
         <Link to="our-work" smooth={true} duration={500} onClick={toggleMenu}>Our Work</Link>
         <Link to="contact" smooth={true} duration={500} onClick={toggleMenu}>Contact</Link> */}
-        <Link to="Section1" smooth={true} duration={500} onClick={toggleMenu}>1</Link>
-        <Link to="Section2" smooth={true} duration={500} onClick={toggleMenu}>2</Link>
-        <Link to="Section3" smooth={true} duration={500} onClick={toggleMenu}>3</Link>
-        <Link to="Section4" smooth={true} duration={500} onClick={toggleMenu}>4</Link>
-        <Link to="Section5" smooth={true} duration={500} onClick={toggleMenu}>5</Link>
-        <Link to="Section6" smooth={true} duration={500} onClick={toggleMenu}>6</Link>
-        <Link to="Section7" smooth={true} duration={500} onClick={toggleMenu}>7</Link>
+        <Link to="hero-section" smooth={true} duration={500} onClick={toggleMenu}>Home</Link>
+        <Link to="about-section" smooth={true} duration={500} onClick={toggleMenu}>2</Link>
+        <Link to="cta-section" smooth={true} duration={500} onClick={toggleMenu}>3</Link>
+        <Link to="cta-content" smooth={true} duration={500} onClick={toggleMenu}>4</Link>
+        <Link to="features-section" smooth={true} duration={500} onClick={toggleMenu}>5</Link>
+        <Link to="family-section" smooth={true} duration={500} onClick={toggleMenu}>6</Link>
+        <Link to="closing-section" smooth={true} duration={500} onClick={toggleMenu}>Footer</Link>
       </nav>
     </header>
   );

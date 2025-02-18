@@ -1,71 +1,111 @@
 import React from 'react';
-// import { Button } from 'react-scroll';
 import { ChevronDown } from 'lucide-react';
-import IMG1 from '../assets/IMG1.jpg';
-import IMG2 from '../assets/IMG2.jpg';
-import IMG3 from '../assets/IMG3.jpg';
-import IMG4 from '../assets/IMG4.jpg';
-import IMG5 from '../assets/IMG5.jpg';
-import IMG6 from '../assets/IMG6.jpg';
-import IMG7 from '../assets/IMG7.jpg';
-import IMG8 from '../assets/IMG8.jpg';
-import IMG9 from '../assets/IMG9.jpg';
+import heroBackground from '../assets/IMG3.jpg';
+import familyImage from '../assets/IMG4.jpg';
+import hardwoodImage from '../assets/IMG5.jpg';
+import ctaImage from '../assets/IMG6.jpg';
 
 const MainPage = () => {
-    return (
-        <div className='mainDiv'>
-            <section className='Section1'>
-                <h1>Fils Flooring</h1>
-                <h2>Elevate Every Step</h2>
-                {/* <Button /> */}
-                <ChevronDown size={48} color="white" className='scroll-indicator'/>
-            </section>
-            <section className='Section2'>
-                <h1>Fils Flooring connects people to their spaces through high-quality flooring solutions that blend style and durability, helping every home and business stand out with lasting beauty.</h1>
-            </section>
-            <section className='Section3'>
-                <h1>Image Here</h1>
-                <h1>Step into Style</h1>
-                <btn>Schedule Now Button</btn>
-            </section>
-            <section className='Section4'>
-                <ul className='section4List'>
-                    <li><h1>Designed for Living</h1></li>
-                    <li><h1>Unmatched Comfort</h1></li>
-                    <li><h1>Exceptional Craftsmanship</h1></li>
-                    <li><h1>Built to Last</h1></li>
-                    {/* <li>Transform Your Home</li> */}
-                </ul>
-            </section>
-            <section className='Section5'>
-                <section className='Section5left'>
-                    <h1>Fils Flooring - Whole Family Approved</h1>
-                    <p>A favorite for families and homeowners alike. Fils Flooring offers not just beautiful designs, but durable solutions for every room. Crafted with premium materials to create spaces that stand up to life’s daily wear and tear!</p>
-                </section>
-                <section>
-                    <p>Image Goes Here</p>
-                </section>
-            </section>
-            <section className='Section6'>
-                <section>
-                    <p>Image Goes Here</p>
-                </section>
-                <section className='Section6left'>
-                    <h1>GET YOUR</h1>
-                    <h2>Hardwood Transformation</h2>
-                    <h2>Elevate Your Home with Timeless Elegance</h2>
-                    <p>Our premium hardwood collection offers the perfect blend of style and durability to enhance any room. Whether you’re looking for a modern finish or classic warmth, our expertly crafted hardwood floors will transform your space with lasting beauty and unmatched quality. Easy to maintain and built to stand the test of time.</p>
-                </section>
-            </section>
-            <section className='Section7'>
-                <h1>Experience the epitome of elegance with Fils Flooring. Where artistry meets precision, our premium floors exude sophistication, transforming your home or business into a sanctuary of timeless luxury and unparalleled refinement.</h1>
-            </section>
-
-            <section className='Section8'>
-                <h1>&copy; 2024 Fil's Flooring Inc. All rights reserved.</h1>
-            </section>
+  return (
+    <div className="main-container">
+      {/* HERO SECTION */}
+      <section
+        className="hero-section"
+        style={{ backgroundImage: `url(${heroBackground})` }}
+      >
+        <div className="hero-content">
+          <h1>Fils Flooring</h1>
+          <p className="tagline">Elevate Every Step</p>
         </div>
-    );
+        <ChevronDown size={48} color="white" className="scroll-indicator" />
+      </section>
+
+      {/* ABOUT SECTION */}
+      <section className="about-section">
+        <div className="container">
+          <h2>Quality Flooring, Lasting Beauty</h2>
+          <p>
+            Fils Flooring connects people to their spaces through high-quality flooring solutions
+            that blend style and durability, helping every home and business stand out with lasting beauty.
+          </p>
+        </div>
+      </section>
+
+      {/* CALL TO ACTION SECTION */}
+      <section className="cta-section">
+        <div className="container cta-container">
+          <div className="cta-image">
+            <img src={ctaImage} alt="Flooring sample showcasing style" />
+          </div>
+          <div className="cta-content">
+            <h2>Step into Style</h2>
+            <button className="btn-primary">Schedule Now</button>
+          </div>
+        </div>
+      </section>
+
+      {/* FEATURES SECTION */}
+      <section className="features-section">
+        <div className="container">
+          <ul className="features-list">
+            <li>Designed for Living</li>
+            <li>Unmatched Comfort</li>
+            <li>Exceptional Craftsmanship</li>
+            <li>Built to Last</li>
+          </ul>
+        </div>
+      </section>
+
+      {/* FAMILY APPROVED SECTION */}
+      <section className="family-section">
+        <div className="container family-container">
+          <div className="family-text">
+            <h2>Whole Family Approved</h2>
+            <p>
+              A favorite for families and homeowners alike, Fils Flooring offers not just beautiful designs but durable solutions for every room.
+              Crafted with premium materials, our floors stand up to daily wear and tear.
+            </p>
+          </div>
+          <div className="family-image">
+            <img src={familyImage} alt="Family enjoying a beautifully floored home" />
+          </div>
+        </div>
+      </section>
+
+      {/* HARDWOOD TRANSFORMATION SECTION */}
+      <section className="hardwood-section">
+        <div className="container hardwood-container">
+          <div className="hardwood-image">
+            <img src={hardwoodImage} alt="Premium hardwood floors" />
+          </div>
+          <div className="hardwood-text">
+            <h2>Hardwood Transformation</h2>
+            <p>
+              Elevate your home with timeless elegance. Our premium hardwood collection offers the perfect blend of style and durability.
+              Whether you’re after a modern finish or classic warmth, our hardwood floors transform any room with lasting quality.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* CLOSING STATEMENT */}
+      <section className="closing-section">
+        <div className="container">
+          <h2>
+            Experience the epitome of elegance with Fils Flooring. Where artistry meets precision,
+            our premium floors exude sophistication—transforming your home or business into a sanctuary of timeless luxury.
+          </h2>
+        </div>
+      </section>
+
+      {/* FOOTER */}
+      <footer className="footer">
+        <div className="container">
+          <p>&copy; 2024 Fil's Flooring Inc. All rights reserved.</p>
+        </div>
+      </footer>
+    </div>
+  );
 };
 
-export default MainPage
+export default MainPage;
