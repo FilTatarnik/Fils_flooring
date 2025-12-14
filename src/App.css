@@ -445,6 +445,10 @@ header {
   
   .navbar.open {
     display: flex;
+    background-color: white;
+    width: 20%;
+    border-radius: 8px;
+
   }
   
   /* Original .Section7 h1 rule mapped to closing-section h2 */
@@ -479,6 +483,8 @@ header {
     font-size: 2rem;
     line-height: 1.4;
   }
+
+ 
   
   /* Map Section3, Section4, Section5, Section6, Section7 to new class names */
   .cta-section,
