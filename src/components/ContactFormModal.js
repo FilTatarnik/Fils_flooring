@@ -1,18 +1,15 @@
-import React, { useState, useEffect } from 'react';
-import emailjs from 'emailjs-com';
+import React, { useState } from 'react';
 
 const ContactFormModal = ({ isOpen, onClose }) => {
   const [formData, setFormData] = useState({
-    name: '',
     email: '',
     message: ''
   });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitMessage, setSubmitMessage] = useState('');
-
-  useEffect(() => {
-    emailjs.init("sktDoTG6r6q6oUahH"); // Replace with your actual EmailJS user ID
-  }, []);
+  const [submitStatus, setSubmitStatus] = useState({
+    submitting: false,
+    success: false,
+    error: null
+  });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -21,28 +18,33 @@ const ContactFormModal = ({ isOpen, onClose }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setIsSubmitting(true);
-    setSubmitMessage('');
+    setSubmitStatus({ submitting: true, success: false, error: null });
 
     try {
-      await emailjs.send(
-        "service_ln3t518", // Replace with your EmailJS service ID
-        "template_e5t6j6d", // Replace with your EmailJS template ID
-        {
-          from_name: formData.name,
-          from_email: formData.email,
-          message: formData.message,
-          to_email: "ftatarnik@gmail.com"
-        }
-      );
-      setSubmitMessage('Message sent successfully!');
-      setFormData({ name: '', email: '', message: '' });
-      setTimeout(onClose, 3000); // Close the modal after 3 seconds
+      const response = await fetch("https://formspree.io/f/meoydqro", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: JSON.stringify(formData)
+      });
+
+      if (response.ok) {
+        setSubmitStatus({ submitting: false, success: true, error: null });
+        setFormData({ email: '', message: '' });
+        setTimeout(onClose, 3000);
+      } else {
+        const errorData = await response.json();
+        throw new Error(errorData.message || 'Submission failed');
+      }
     } catch (error) {
-      console.error('Error sending email:', error);
-      setSubmitMessage('Failed to send message. Please try again.');
-    } finally {
-      setIsSubmitting(false);
+      console.error('Submission error:', error);
+      setSubmitStatus({ 
+        submitting: false, 
+        success: false, 
+        error: error.message || 'Submission failed' 
+      });
     }
   };
 
@@ -52,11 +54,23 @@ const ContactFormModal = ({ isOpen, onClose }) => {
     <div className="modal-overlay">
       <div className="modal-content">
         <h3 className="modal-title">Contact Me</h3>
-        <form className="contact-form" onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit}>
           <div className="form-group">
-            <label htmlFor="name" className="form-label">Name</label>
+            <label htmlFor="email">Email Address</label>
             <input
-              type="text"
+              id="email"
+              type="email" 
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              className="form-input"
+              required
+            />
+          </div>
+
+          <div className="form-group">
+            <label htmlFor="name">Name</label>
+            <input
               id="name"
               name="name"
               value={formData.name}
@@ -65,20 +79,9 @@ const ContactFormModal = ({ isOpen, onClose }) => {
               required
             />
           </div>
+          
           <div className="form-group">
-            <label htmlFor="email" className="form-label">Email</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              className="form-input"
-              required
-            />
-          </div>
-          <div className="form-group">
-            <label htmlFor="message" className="form-label">Message</label>
+            <label htmlFor="message">Message</label>
             <textarea
               id="message"
               name="message"
@@ -86,20 +89,16 @@ const ContactFormModal = ({ isOpen, onClose }) => {
               onChange={handleChange}
               className="form-textarea"
               required
-            ></textarea>
+            />
           </div>
-          {submitMessage && (
-            <div className={`submit-message ${submitMessage.includes('successfully') ? 'success' : 'error'}`}>
-              {submitMessage}
-            </div>
-          )}
+          
           <div className="form-actions">
-            <button
-              type="submit"
+            <button 
+              type="submit" 
+              disabled={submitStatus.submitting}
               className="btn btn-primary"
-              disabled={isSubmitting}
             >
-              {isSubmitting ? 'Sending...' : 'Send'}
+              {submitStatus.submitting ? 'Sending...' : 'Submit'}
             </button>
             <button
               onClick={onClose}
@@ -109,6 +108,14 @@ const ContactFormModal = ({ isOpen, onClose }) => {
               Close
             </button>
           </div>
+
+          {submitStatus.success && (
+            <p className="submit-message success">Thanks for joining!</p>
+          )}
+
+          {submitStatus.error && (
+            <p className="submit-message error">{submitStatus.error}</p>
+          )}
         </form>
       </div>
     </div>

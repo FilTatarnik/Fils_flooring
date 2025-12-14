@@ -1,11 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { ChevronDown } from 'lucide-react';
 import heroBackground from '../assets/IMG3.jpg';
 import familyImage from '../assets/IMG4.jpg';
 import hardwoodImage from '../assets/IMG5.jpg';
 import ctaImage from '../assets/IMG6.jpg';
+import ContactFormModal from './ContactFormModal';
 
 const MainPage = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
+
   return (
     <div className="main-container">
       {/* HERO SECTION */}
@@ -24,10 +30,6 @@ const MainPage = () => {
       <section className="about-section">
         <div className="container">
           <h2>Quality Flooring, Lasting Beauty</h2>
-          <p>
-            Fils Flooring connects people to their spaces through high-quality flooring solutions
-            that blend style and durability, helping every home and business stand out with lasting beauty.
-          </p>
         </div>
       </section>
 
@@ -37,9 +39,17 @@ const MainPage = () => {
           <div className="cta-image">
             <img src={ctaImage} alt="Flooring sample showcasing style" />
           </div>
+        </div>
+      </section>
+
+            {/* Schedule now Section */}
+      <section className="cta-section">
+        <div className="container cta-container">
           <div className="cta-content">
-            <h2>Step into Style</h2>
-            <button className="btn-primary">Schedule Now</button>
+            <button className="btn-primary" onClick={() => {
+              console.log("Button clicked, attempting to open modal");
+              openModal();
+            }}>Schedule Now</button>
           </div>
         </div>
       </section>
@@ -62,7 +72,6 @@ const MainPage = () => {
           <div className="family-text">
             <h2>Whole Family Approved</h2>
             <p>
-              A favorite for families and homeowners alike, Fils Flooring offers not just beautiful designs but durable solutions for every room.
               Crafted with premium materials, our floors stand up to daily wear and tear.
             </p>
           </div>
@@ -81,8 +90,7 @@ const MainPage = () => {
           <div className="hardwood-text">
             <h2>Hardwood Transformation</h2>
             <p>
-              Elevate your home with timeless elegance. Our premium hardwood collection offers the perfect blend of style and durability.
-              Whether you’re after a modern finish or classic warmth, our hardwood floors transform any room with lasting quality.
+              Elevate your home with timeless elegance.
             </p>
           </div>
         </div>
@@ -92,8 +100,8 @@ const MainPage = () => {
       <section className="closing-section">
         <div className="container">
           <h2>
-            Experience the epitome of elegance with Fils Flooring. Where artistry meets precision,
-            our premium floors exude sophistication—transforming your home or business into a sanctuary of timeless luxury.
+            Fils Flooring. Where artistry meets precision,
+            transforming your home or business into a sanctuary of timeless luxury.
           </h2>
         </div>
       </section>
@@ -104,6 +112,14 @@ const MainPage = () => {
           <p>&copy; 2024 Fil's Flooring Inc. All rights reserved.</p>
         </div>
       </footer>
+
+      {/* CONTACT FORM MODAL */}
+      {isModalOpen && (
+        <ContactFormModal 
+          isOpen={isModalOpen} 
+          onClose={closeModal} 
+        />
+      )}
     </div>
   );
 };
