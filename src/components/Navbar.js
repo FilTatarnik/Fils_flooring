@@ -24,7 +24,7 @@ const Navbar = () => {
         <Link to="hero-section" smooth={true} duration={500} offset={-80} onClick={toggleMenu}>Home</Link>
         {/* <Link to="about-section" smooth={true} duration={500} offset={-80} onClick={toggleMenu}>About</Link> */}
         {/* <Link to="cta-section" smooth={true} duration={500} offset={-80} onClick={toggleMenu}>3</Link> */}
-        <Link to="cta-content" smooth={true} duration={500} offset={-80} onClick={toggleMenu}>Schedule Now</Link>
+        <Link to="schedbtn" smooth={true} duration={500} offset={-400} onClick={toggleMenu}>Schedule Now</Link>
         {/* <Link to="features-section" smooth={true} duration={500} offset={-80} onClick={toggleMenu}>5</Link> */}
         {/* <Link to="family-section" smooth={true} duration={500} offset={-80} onClick={toggleMenu}>6</Link> */}
         {/* <Link to="closing-section" smooth={true} duration={500} offset={-80} onClick={toggleMenu}>Footer</Link> */}

@@ -49,11 +49,10 @@ header {
 }
 
 .navbar a {
-  color: black;
+  color: rgb(0, 0, 0);
   text-decoration: none;
   font-weight: bold;
   transition: color 0.2s ease;
-  padding: 1rem;
 }
 
 .navbar a:hover {
@@ -136,6 +135,11 @@ header {
 ========================= */
 .cta-section {
   padding: 4rem 2rem;
+  background-color: #C68B4A;
+  color: white;
+}
+.cta-section-schd {
+  padding: 10rem 2rem;
   background-color: #C68B4A;
   color: white;
 }
@@ -498,8 +502,13 @@ header {
     left: 0;
     right: 0;
     padding: 1rem;
+    overflow: hidden;
   }
   
+  .navbar.a {
+    background-color: red;
+  }
+
   .navbar.open {
     display: flex;
   }

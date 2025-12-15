@@ -43,14 +43,12 @@ const MainPage = () => {
       </section>
 
             {/* Schedule now Section */}
-      <section className="cta-section">
+      <section className="cta-section-schd">
         <div className="container cta-container">
-          <div className="cta-content">
-            <button className="btn-primary" onClick={() => {
+            <button className="btn-primary schedbtn" onClick={() => {
               console.log("Button clicked, attempting to open modal");
               openModal();
             }}>Schedule Now</button>
-          </div>
         </div>
       </section>
 
