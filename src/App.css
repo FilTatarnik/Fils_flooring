@@ -56,7 +56,7 @@ header {
 }
 
 .navbar a:hover {
-  color: white;
+  color: rgb(169, 160, 160);
 }
 
 .hamburger {
@@ -152,7 +152,7 @@ header {
 }
 
 .cta-image img {
-  max-width: 50%;
+  max-width: 90%;
   border-radius: 8px;
   margin: 1rem;
 }
@@ -222,14 +222,16 @@ header {
 .family-container {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: space-between;
   justify-content: center;
 }
 
 .family-text,
 .family-image {
   flex: 1 1 300px;
+  max-width: 100%;
   padding: 1rem;
+  
 }
 
 .family-text h2 {
@@ -243,7 +245,7 @@ header {
 
 .family-image img {
   max-width: 100%;
-  height: auto;
+  /* height: auto; */
   border-radius: 8px;
 }
 
@@ -270,7 +272,8 @@ header {
 }
 
 .hardwood-image img {
-  max-width: 100%;
+margin: 0 auto;
+  max-width: 430px;
   height: auto;
   border-radius: 8px;
 }
@@ -573,10 +576,18 @@ header {
   .closing-section h2 {
     font-size: 3rem;
   }
+
+  .hardwood-image img {
+    display: block; 
+    margin: 0 auto; 
+  }
+
 }
 
 /* Small devices (600px and up) */
 @media only screen and (min-width: 600px) and (max-width: 767px) {
+
+  
   .hero-section {
     height: auto;
     min-height: 100vh;
@@ -632,6 +643,7 @@ header {
   .family-section,
   .hardwood-section {
     flex-direction: column;
+    margin: 0 auto;
   }
   
   .family-text,
@@ -679,6 +691,16 @@ header {
   /* Mapping original Section2 h1 rule to about-section h2 */
   .about-section h2 {
     font-size: 3rem;
+  }
+
+
+  .hardwood-image img {
+    display: block; 
+    margin: 0 auto; 
+  }
+
+  .hardwood-text{
+    text-align: center;
   }
 }
 
